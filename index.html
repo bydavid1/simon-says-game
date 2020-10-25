@@ -163,7 +163,7 @@
       const naranja = document.getElementById('naranja')
       const verde = document.getElementById('verde')
       const btnEmpezar = document.getElementById('btnEmpezar')
-      const ultimoNivel = 5
+      const ultimoNivel = 10
       var maxScore = 1
 
       class Juego {
@@ -275,6 +275,7 @@
                 this.setMaxScore()
                 this.ganoJuego()
               } else {
+                this.correcto()
                 setTimeout(this.siguienteNivel, 1500)
               }
             }
@@ -290,6 +291,19 @@
               maxScore = currentLevel
               document.getElementById('max-score').textContent = `Max ${maxScore}`
             }
+        }
+
+        correcto () {
+          let timerInterval
+          Swal.fire({
+            title: 'Correcto!',
+            imageUrl: 'https://media.giphy.com/media/SA0uGPO267tlel8wIQ/giphy.gif',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+            background: '#fff url(https://sweetalert2.github.io/images/trees.png)',
+            timer: 1200,
+          })
         }
 
         ganoJuego () {

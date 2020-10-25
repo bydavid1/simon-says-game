@@ -10,5 +10,9 @@ Se han utilizado las siguientes fuentes y plugins
 
 | Plugin | LINK |
 | ------ | ------ |
-| SweetAlert2 | [https://sweetalert2.github.io/][PlDb] |
-| Grandstander| [https://fonts.google.com/specimen/Grandstander/][PlDb] |
+| SweetAlert2 | [https://sweetalert2.github.io/] |
+
+| Fuente | LINK |
+| ------ | ------ |
+| Grandstander | [https://fonts.google.com/specimen/Grandstander/] |
+
