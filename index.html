@@ -202,6 +202,7 @@
         siguienteNivel() {
             document.getElementById('level').textContent = `Nivel ${this.nivel}`
             this.subNivel = 0
+            this.eliminarEventosClick()
             this.iluminarSecuencia()
             this.agregarEventosClick()
         }
@@ -270,13 +271,12 @@
             this.subNivel++
             if (this.subNivel === this.nivel) {
               this.nivel++
-              this.eliminarEventosClick()
               if (this.nivel === (ultimoNivel + 1)) {
                 this.setMaxScore()
                 this.ganoJuego()
               } else {
                 this.correcto()
-                setTimeout(this.siguienteNivel, 1500)
+                setTimeout(this.siguienteNivel, 1700)
               }
             }
           }else{
@@ -294,7 +294,6 @@
         }
 
         correcto () {
-          let timerInterval
           Swal.fire({
             title: 'Correcto!',
             imageUrl: 'https://media.giphy.com/media/SA0uGPO267tlel8wIQ/giphy.gif',
@@ -302,7 +301,8 @@
             imageHeight: 200,
             imageAlt: 'Custom image',
             background: '#fff url(https://sweetalert2.github.io/images/trees.png)',
-            timer: 1200,
+            timer: 1100,
+            showConfirmButton : false
           })
         }
 
